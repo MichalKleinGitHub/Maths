@@ -1,9 +1,9 @@
 [1] (21.8.2018)
 (Michal)
-- Vytvoří hlavné okno - velkost = aktualne rozsirenie obrazovky - 100 px z kazde strany
-                      - okno bude roztahovatelne a vsetky komponenty sa budu prisposobovat aktualnej velkosti
-- Menu/Menu Panel (pridam tlacidlo log in/out) (vsetky nazvy aplikacie nacitam z konfig. suboru main/resources/languages)
-- Menu/Nastavenia/Volba jazyka tlačitko bude mít šipku, nebude spustitelné.
+- Vytvoří hlavné okno -> velkost = aktualne rozsirenie obrazovky - 100 px z kazde strany [HOTOVO 22.8.2018 18:01]
+                      -> okno bude roztahovatelne a vsetky komponenty sa budu prisposobovat aktualnej velkosti [HOTOVO 23.8.2018 17:57]
+- Menu/ tlacidlo log in/out (vsetky nazvy aplikacie nacitam z konfig. suboru main/resources/languages) [HOTOVO, okrem konfig suboru 22.8.2018 22:41]
+- Menu/Nastavenia/Volba jazyka tlačitko bude mít šipku, nebude spustitelné. [HOTOVO 23.8.2018 21:29]
 (Lubor)
 - vytvořit metodu pro lokalizaci do jazyků (s tím souvisí i konfigurační soubory a jejich načítání v adresáři
     main/resources/languages)

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jfoenix-0.0.0-SNAPSHOT-retrolambda">
+    <CLASSES>
+      <root url="jar://D:/SceneBuilder/jfoenix-0.0.0-SNAPSHOT-retrolambda.jar!/" />
+      <root url="jar://D:/SceneBuilder/jfoenix.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

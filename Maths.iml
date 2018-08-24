@@ -19,5 +19,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jfoenix-0.0.0-SNAPSHOT-retrolambda" level="project" />
   </component>
 </module>
