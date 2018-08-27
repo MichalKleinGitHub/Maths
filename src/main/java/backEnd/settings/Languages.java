@@ -51,6 +51,7 @@ public class Languages {
             }
             FXLabeledList.getFxLabeledList().stream().forEach(node -> {
                 for (String line : currentList) {
+                    //System.out.println(line);
                     if (line.split("=")[0].equals(node.getId())) {
                         node.setText(line.split("=")[1]);
                         break;
