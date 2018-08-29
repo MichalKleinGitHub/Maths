@@ -3,26 +3,24 @@ package main.java;
 import main.java.frontend.windows.MainWindow;
 
 /**
+ * This class is the launcher of project
+ * Actual version of project is saved in VERSION variable. VERSION contains 3 numbers:
+ * <li>1.st number = version (version now release when we deal)</li>
+ * <li>2.nd number = task that we have scheduled in List_of_Stories</li>
+ * <li>3.rd number = current commit</li>
+ *
  * @author klein
  * @since 24.8.2018
- * @version 1.0
- *
- * This class is the launcher of project
  */
-public class Maths{
+public class Maths {
+
+    public static final String VERSION = "1.0.5";
 
     /**
-     * This String represents actual version of project
-     * The number standing before a decimal point has a meaning of current task that we have scheduled in List_of_Stories
-     * The number standing behind a decimal point has a meaning of current commit
-     * @see List_of_Stories (in Maths package)
-     */
-    public static final String VERSION = "1.0";
-
-    /**
+     * Create new instance of MainWindow class
+     * //TODO mainWindow by mohl být singleton a hlavně by se mohl kontorlovat, aby se spustila vždy jen jedna instance
      *
      * @param args
-     * Create new instance of MainWindow class and call its launchProgram() method
      */
     public static void main(String[] args) {
         new MainWindow().launchProgram();

@@ -10,36 +10,32 @@ import main.java.frontend.windowComponents.mainWindowComponents.MainMenu;
 import java.awt.*;
 
 /**
+ * This class represents main stage, which is opened as first, after calling launchProgram() method in Maths class
+ *
  * @author klein
  * @since 25.8.2018
- *
- * This class represents main stage, which is opened as first, after callig launchProgram() method in Maths class
  */
 public class MainWindow extends Application {
-
-    /**
-     * These private final Objects and primitives are used to resizing our layout on the base of height and width of monitor
-     * used to display an application
-     */
+    //Following constants are used to get current resolution of screen
     private final Toolkit tool = Toolkit.getDefaultToolkit();
     private final Dimension src = tool.getScreenSize();
-    private final double INITIAL_WINDOW_HEIGHT = src.getHeight();
-    private final double INITIAL_WINDOW_WIDTH = src.getWidth();
-    ///////////////////////////////////////////////////////////
-    private String layoutStyle = "-fx-background-color: #f2ebde"; // <- v buducnosti budeme farby tiez nacitat z configu
+    private final double initialWindowHeight = src.getHeight();
+    private final double initialWindowWidth = src.getWidth();
+    // na toto bych udělal v toolech třídu, která by měla možnost výběru barev
+    private String layoutStyle = "-fx-background-color: #f2ebde";
 
     private MainMenu mainMenu;
 
     /**
+     * This method sets all main components to display an application successfully (Stage, Scene, Layout, MainMenu)
      *
-     * @param primaryStage
-     * This method is setting all main components for displaying an application successfuly (Stage, Scene, pane, MainMenu (for now)
+     * @param primaryStage This parameter isn't inserted by user
      */
     @Override
     public void start(Stage primaryStage){
         AnchorPane layout = new AnchorPane();
         layout.setStyle(layoutStyle);
-        Scene scene = new Scene(layout, 1366 - 200, 768 - 200);
+        Scene scene = new Scene(layout, initialWindowWidth - 200, initialWindowHeight - 200);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Maths");
         primaryStage.show();
@@ -53,8 +49,9 @@ public class MainWindow extends Application {
 
     /**
      *
-     * @param primaryStage
      * This method will be calling resizeWidth() method stored in ResizeAllComponents class, but for now the resizing system is broken
+     *
+     * @param primaryStage
      * @see ResizeAllComponents
      */
     private void primaryStageWidthListener(Stage primaryStage){
@@ -82,7 +79,8 @@ public class MainWindow extends Application {
     }
 
     /**
-     * This method is calling start() method
+     * Thanks this method we are able to run application from another class
+     * This is JavaFX syntax so launch redirect to start(Stage) method
      */
     public void launchProgram(){
         launch();

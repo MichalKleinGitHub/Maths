@@ -142,11 +142,6 @@ public class MainMenu {
                 layout.getChildren().addAll(loginBar.getNodes());
                 isLoginBarOpened = true;
 
-
-                    /**
-                     * tu mame big problem, pretoze neviem ako spravne spojazdnit tento listener :(
-                     * funguje az po druhom otvoreni loginImage
-                     */
                     loginBar.getLogin().setOnMousePressed(event1 -> {
                         if (!loginWindow.isLoginWindowIsOpened()) {
                             if (registerWindow.isRegisterWindowIsOpened()){

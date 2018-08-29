@@ -5,6 +5,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import main.tools.TDatabase;
 
 public class RegisterWindow {
     private TextField name = new TextField();
