@@ -3,8 +3,8 @@ package main.java;
 import main.java.frontend.windows.MainWindow;
 
 /**
- * This class is the launcher of project
- * Actual version of project is saved in VERSION variable. VERSION contains 3 numbers:
+ * This class is the launcher of the project
+ * Actual version of the project is saved in the VERSION variable. VERSION contains 3 numbers:
  * <li>1.st number = version (version now release when we deal)</li>
  * <li>2.nd number = task that we have scheduled in List_of_Stories</li>
  * <li>3.rd number = current commit</li>

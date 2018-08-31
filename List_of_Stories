@@ -14,8 +14,8 @@
 
 [1] (29.8.2018)
 (Michal)
-- vytvorit v balíčku tool triedu farbu, ktorú budeme chcieť (parameter String) metoda vrati farbu
-- vytvorit v balíčku tool triedu farbu, ktorú budeme chcieť (hexadec. číslo) metoda vrati farbu
+- vytvorit v balíčku tools triedu farbu, ktorej metoda vrati farbu (parameter String)
+- vytvorit v balíčku too1s triedu farbu, ktorej metoda vrati farbu (parameter hexadec. číslo)
 - Nastavenia / moznost zmeny farby pozadia (combobox, ktory obsahuje farby)
 - vytvorit ukazku zvolenej farby (stvorcek, ktory sa sfarbi podla vyberu)
 - SPROVOZNIT login, aby sa skutocne prihlasovalo do databaz

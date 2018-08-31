@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class uce all basic commands for comunication with MySQL database. Thanks this class you don't need to import sql libraries. All methods returns
+ * This class use all basic commands for communication with MySQL database. Thanks to this class you don't need to import sql libraries. All methods returns
  * void or List of Strings as result from SQL command.
  * <li>All connections, statements and result sets are closed in each method, so you don't need to close it when method is used.</li>
  * <li>All SQL commands are saved in log in SQL.log file (even connection data etc.)</li>
@@ -45,7 +45,7 @@ public class TDatabase {
     //================================================= METODY TRIDY ===================================================
 
     /**
-     * This method try to connect into MySQL database with access parameters. When you success connected, all of access parameters will save into global
+     * This method try to connect into MySQL database with access parameters. When you are connected successfully, all of access parameters will save into global
      * variables and thanks these variables we don't need to call this method before each of methods.
      *
      * @param server ip address or DNS of server (for example localhost or 127.0.0.1)

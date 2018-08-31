@@ -6,10 +6,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
 /**
+ * THIS CLASS IS NOT WORKING, it is supposed to resize ALL components in porject after any width or height change
+ *
  * @author klein
  * @since 25.8.2018
- *
- * THIS CLASS IS NOT WORKING, it is supposed to be resizing ALL components in porject
  */
 
 public class ResizeAllComponents {

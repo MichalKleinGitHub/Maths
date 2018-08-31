@@ -87,3 +87,92 @@ LEFT JOIN passwords
 ON users.id_password = passwords.id
 [2018-08-25 10:35:16] UNABLE TO CONNECT! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
 [2018-08-25 10:35:16] UNABLE TO CONNECT! (jdbc:mysql://null:null/null user:null password:null)
+[2018-08-30 20:40:18] UNABLE TO CONNECT! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:40:18] UNABLE TO CONNECT! (jdbc:mysql://null:null/null user:null password:null)
+[2018-08-30 20:40:20] UNABLE TO CONNECT! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:40:20] UNABLE TO CONNECT! (jdbc:mysql://null:null/null user:null password:null)
+[2018-08-30 20:40:22] UNABLE TO CONNECT! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:40:22] UNABLE TO CONNECT! (jdbc:mysql://null:null/null user:null password:null)
+[2018-08-30 20:40:24] UNABLE TO CONNECT! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:40:24] UNABLE TO CONNECT! (jdbc:mysql://null:null/null user:null password:null)
+[2018-08-30 20:41:06] CONNECTED! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:41:06] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:27] CONNECTED! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:42:27] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:27] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:27] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:40] CONNECTED! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:42:40] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:40] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:40] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:44] CONNECTED! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-30 20:42:44] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:44] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-30 20:42:44] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-31 07:21:16] CONNECTED! (jdbc:mysql://localhost:3306/db_maths user:root password:tukan)
+[2018-08-31 07:21:16] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-31 07:21:16] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id
+[2018-08-31 07:21:16] SELECT name, password
+FROM users
+LEFT JOIN passwords
+ON users.id_password = passwords.id

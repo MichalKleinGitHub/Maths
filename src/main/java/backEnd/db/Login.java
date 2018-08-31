@@ -39,6 +39,7 @@ public class Login {
             if (TDatabase.executeSqlSelect(sql).get(i).get(0).toLowerCase().equals(userName.toLowerCase()) &&
                     TDatabase.executeSqlSelect(sql).get(i).get(1).equals(password)) {
                 result = EnumResultFromDB.ACCESS.name();
+                System.out.println("access");
                 break;
             }
         }

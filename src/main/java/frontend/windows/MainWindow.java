@@ -49,7 +49,7 @@ public class MainWindow extends Application {
 
     /**
      *
-     * This method will be calling resizeWidth() method stored in ResizeAllComponents class, but for now the resizing system is broken
+     * This method will call resizeWidth() method stored in ResizeAllComponents class, but for now the resizing system is broken
      *
      * @param primaryStage
      * @see ResizeAllComponents
@@ -57,29 +57,29 @@ public class MainWindow extends Application {
     private void primaryStageWidthListener(Stage primaryStage){
         if (!mainMenu.equals(null)){
             primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> {
-                ResizeAllComponents.resizeWidth(primaryStage.getWidth(), mainMenu.getMenuBar(), mainMenu.getMyAccount(), mainMenu.getSpecifiedBar(), mainMenu.getLoginImage(), mainMenu.getLanguageImage(), mainMenu.getSettingsImage(), mainMenu.getLoginNodes(), mainMenu.getLanguageNodes());
+                ResizeAllComponents.resizeWidth(primaryStage.getWidth(), mainMenu.getMenuBar(), mainMenu.getMyAccountButton(), mainMenu.getSubMenuBar(), mainMenu.getLoginImage(), mainMenu.getLanguageImage(), mainMenu.getSettingsImage(), mainMenu.getLoginNodes(), mainMenu.getLanguageNodes());
             });
         }
     }
 
 
     /**
+     * This method will call resizeHeight() method stored in ResizeAllComponents class, but for now the resizing system is broken
      *
      * @param primaryStage
-     * This method will be calling resizeHeight() method stored in ResizeAllComponents class, but for now the resizing system is broken
      * @see ResizeAllComponents
      */
 
     private void primaryStageHeightListener(Stage primaryStage){
         if (!mainMenu.equals(null)) {
             primaryStage.heightProperty().addListener((obs, oldVal, newVal)-> {
-                ResizeAllComponents.resizeHeight(primaryStage.getHeight(), mainMenu.getMenuBar(), mainMenu.getMyAccount(), mainMenu.getSpecifiedBar(),  mainMenu.getLoginImage(), mainMenu.getLanguageImage(),  mainMenu.getSettingsImage(), mainMenu.getLoginNodes(), mainMenu.getLanguageNodes());
+                ResizeAllComponents.resizeHeight(primaryStage.getHeight(), mainMenu.getMenuBar(), mainMenu.getMyAccountButton(), mainMenu.getSubMenuBar(),  mainMenu.getLoginImage(), mainMenu.getLanguageImage(),  mainMenu.getSettingsImage(), mainMenu.getLoginNodes(), mainMenu.getLanguageNodes());
             });
         }
     }
 
     /**
-     * Thanks this method we are able to run application from another class
+     * Thanks to this method we are able to run application from another class
      * This is JavaFX syntax so launch redirect to start(Stage) method
      */
     public void launchProgram(){

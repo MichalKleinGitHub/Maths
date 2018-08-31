@@ -4,9 +4,14 @@ import com.jfoenix.controls.JFXButton;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
-import main.tools.TDatabase;
 
+/**
+ * RegisterWindow will open, when user wants to register his personal
+ * account by clicking on "Register" button.
+ *
+ * @author klein
+ * @since 28.8.2018
+ */
 public class RegisterWindow {
     private TextField name = new TextField();
     private TextField emailAddress = new TextField();
@@ -15,19 +20,19 @@ public class RegisterWindow {
     private TextField gender = new TextField();
     private JFXButton register = new JFXButton();
 
-    private Text nameT = new Text();
-    private Text emailAddressT = new Text();
-    private Text passwordT = new Text();
-    private Text ageT = new Text();
-    private Text genderT = new Text();
-    private Text registerT = new Text();
-
     private boolean registerWindowIsOpened;
 
+    /**
+     * Constructor of RegisterWindow
+     */
     public RegisterWindow(){
         setComponents();
     }
 
+
+    /**
+     * Method sets an ID names for purpose of easier language changing. Also sets Styles of components
+     */
     private void setComponents() {
         name.setId("NameRegister");
         emailAddress.setId("EmailAddressRegister");
@@ -36,8 +41,9 @@ public class RegisterWindow {
         gender.setId("GenderRegister");
         register.setId("RegisterRegister");
 
-        //FXLabeledList.addFXNodes(name, emailAddress, password, age, gender, register);
-
+//////////////////////////////////////////////////////////////////
+        //Toto tu nebude////////////
+        //Rozvrhnutia budu v ResizeAllComponents triede
         name.setLayoutY(200);
         emailAddress.setLayoutY(250);
         password.setLayoutY(300);
@@ -65,17 +71,19 @@ public class RegisterWindow {
         age.setPromptText("vek");
         gender.setPromptText("pohlavie");
         register.setText("registrovať");
+///////////////////////////////////////////////////////////////////////
+
 
         name.setStyle("-fx-alignment: center");
         emailAddress.setStyle("-fx-alignment: center");
         password.setStyle("-fx-alignment: center");
         age.setStyle("-fx-alignment: center");
         gender.setStyle("-fx-alignment: center");
-
         register.setStyle("-fx-background-color: #54504F");
         register.setTextFill(Color.rgb(242, 235, 222));
     }
 
+    //Getters
     public TextField getName() {
         return name;
     }
@@ -104,6 +112,7 @@ public class RegisterWindow {
         return registerWindowIsOpened;
     }
 
+    //Setters
     public void setRegisterWindowIsOpened(boolean registerWindowIsOpened) {
         this.registerWindowIsOpened = registerWindowIsOpened;
     }

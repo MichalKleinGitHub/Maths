@@ -36,9 +36,9 @@ public class FXLabeledList {
     //================================================= METODY TRIDY ===================================================
 
     /**
-     * This method add each JavaFX node into list of this class. We check in this method if the node is allready in list. This save memory and time when we work
+     * This method adds each JavaFX node into list of this class. In this method we check if the node is already in list. This saves memory and time when we work
      * with this list.
-     * RULE: This method must be call everywhere we add new node to application!!
+     * RULE: This method must be called everywhere we add new node to application!!
      *
      * @param labeleds Labeled is one of super classes of all nodes. This super class able all nodes to set they're text on application. We need this for
      * setting language
