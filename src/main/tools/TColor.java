@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
  * You just call one of its static methods and method will return the color chosen by you as a return value.
  *
  * @author klein
- * @since 31.8,2018
+ * @since 31.8.2018
  */
 public class TColor {
 
@@ -17,16 +17,16 @@ public class TColor {
     /**
      * Returns a Color representation of this String value.
      * Parameter example:
-     * <p>.chooseColor("100 100 100");</p>
+     * <p>.chooseRGBColor("100 100 100");</p>
      * or
-     * <p>.chooseColor("x y z");</p>
+     * <p>.chooseRGBColor("x y z");</p>
      * where every value(x,y and z) must be in the range 0-255
      *
      * @param colorSpecification
      * @return color
      * @throws IllegalArgumentException if any value is out of range
      */
-    public static Color chooseColor(String colorSpecification){
+    public static Color chooseRGBColor(String colorSpecification){
         rgb = colorSpecification.split(" ");
 
         color = Color.rgb(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2]));

@@ -42,12 +42,10 @@ public class MainMenu {
     private boolean isLanguageBarOpened;
     private boolean isSettingsBarOpened;
 
-    private Languages languages = new Languages();
-    private LoginBar loginBar = new LoginBar();
-    private LanguageBar languageBar = new LanguageBar();
-    private LoginWindow loginWindow = new LoginWindow();
-    private RegisterWindow registerWindow = new RegisterWindow();
-    private SettingsWindow settingsWindow = new SettingsWindow();
+    private LoginBar loginBar;
+    private LanguageBar languageBar;
+
+    private SettingsWindow settingsWindow;
 
     /**
      * This is the constructor of MainMenu class
@@ -56,6 +54,9 @@ public class MainMenu {
      */
     public MainMenu(AnchorPane layout) {
         this.layout = layout;
+        settingsWindow = new SettingsWindow(layout);
+        loginBar = new LoginBar(layout);
+        languageBar = new LanguageBar();
 
         //sets components placed on main menu
         setComponents();
@@ -96,6 +97,7 @@ public class MainMenu {
         loginBar.getRegister().setId("Register");
         loginBar.getLogout().setId("Logout");
 
+
         //add nodes from MainMenu class
         FXLabeledList.addFXNodes(myAccountButton);
         //add all nodes from LanguageBar to FXLabeledList
@@ -103,8 +105,7 @@ public class MainMenu {
         //add all nodes from LoginBar to FXLabeledList
         FXLabeledList.addFXNodes(loginBar.getLogin(), loginBar.getRegister(), loginBar.getLogout());
 
-        //setting default language
-        languages.setLanguageFromConfigFile("EN");
+        languageBar.setDefaultLanguage();
     }
 
     /**
@@ -134,36 +135,10 @@ public class MainMenu {
     private void loginListener() {
         loginImage.setOnMousePressed(event -> {
             if (!isLoginBarOpened){
+
                 layout.getChildren().addAll(loginBar.getNodes());
                 isLoginBarOpened = true;
 
-                    loginBar.getLogin().setOnMousePressed(event1 -> {
-                        if (!loginWindow.isLoginWindowIsOpened()) {
-                            if (registerWindow.isRegisterWindowIsOpened()){
-                                layout.getChildren().removeAll(registerWindow.getName(), registerWindow.getEmailAddress(), registerWindow.getPassword(), registerWindow.getGender(), registerWindow.getAge(), registerWindow.getRegister());
-                                registerWindow.setRegisterWindowIsOpened(false);
-                            }
-                            layout.getChildren().addAll(loginWindow.getLogin(),loginWindow.getName(), loginWindow.getPassword());
-                            loginWindow.setLoginWindowIsOpened(true);
-                            System.out.println("Login");
-                        } else {
-                            System.out.println("Okno Login uz je otvorene");
-                        }
-                    });
-
-                    loginBar.getRegister().setOnMousePressed(event1 -> {
-                        if (!registerWindow.isRegisterWindowIsOpened()) {
-                            if (loginWindow.isLoginWindowIsOpened()){
-                                layout.getChildren().removeAll(loginWindow.getLogin(),loginWindow.getName(), loginWindow.getPassword());
-                                loginWindow.setLoginWindowIsOpened(false);
-                            }
-                            layout.getChildren().addAll(registerWindow.getName(), registerWindow.getEmailAddress(), registerWindow.getPassword(), registerWindow.getGender(), registerWindow.getAge(), registerWindow.getRegister());
-                            registerWindow.setRegisterWindowIsOpened(true);
-                            System.out.println("Register");
-                        } else {
-                            System.out.println("Okno Register uz je otvorene");
-                        }
-                    });
             } else {
                 layout.getChildren().removeAll(loginBar.getNodes());
                 isLoginBarOpened = false;
@@ -177,12 +152,11 @@ public class MainMenu {
     private void settingsListener() {
         settingsImage.setOnMousePressed(event -> {
             if (!isSettingsBarOpened){
-                layout.getChildren().addAll(settingsWindow.getPalette());
-                System.out.println("OTVOR");
+
+                layout.getChildren().addAll(settingsWindow.getPalette(), settingsWindow.getColors(), settingsWindow.getColorRGB(), settingsWindow.getColorHxdcml(), settingsWindow.getColorRGBButton(), settingsWindow.getColorHxdcmlButton());
                 isSettingsBarOpened = true;
             } else {
-                layout.getChildren().removeAll(settingsWindow.getPalette());
-                System.out.println("ZATVOR");
+                layout.getChildren().removeAll(settingsWindow.getPalette(), settingsWindow.getColors(), settingsWindow.getColorRGB(), settingsWindow.getColorHxdcml(), settingsWindow.getColorRGBButton(), settingsWindow.getColorHxdcmlButton());
                 isSettingsBarOpened = false;
             }
         });
@@ -197,21 +171,6 @@ public class MainMenu {
                 layout.getChildren().addAll(languageBar.getNodes());
                 isLanguageBarOpened = true;
 
-
-                  //tu mame big problem, pretoze neviem ako spravne spojazdnit tieto listeners :(
-                  //funguje az po druhom otvoreni languageImage
-
-                languageBar.getEnglish().setOnMousePressed(event2 -> {
-                        languages.setLanguageFromConfigFile("EN");
-                });
-
-                languageBar.getCzech().setOnMousePressed(event2 -> {
-                        languages.setLanguageFromConfigFile("CZ");
-                });
-
-                languageBar.getSlovak().setOnMousePressed(event2 -> {
-                        languages.setLanguageFromConfigFile("SK");
-                });
             } else {
                 layout.getChildren().removeAll(languageBar.getNodes());
                 isLanguageBarOpened = false;

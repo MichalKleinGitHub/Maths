@@ -5,6 +5,7 @@ import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import main.java.backEnd.settings.Languages;
 
 
 /**
@@ -28,6 +29,8 @@ public class LanguageBar {
 
     private Group nodes = new Group(languageBarRectangle, languageBarTriangle,english, czech, slovak);
 
+    private Languages languages = new Languages();
+
     /**
      * Constructor of LanguageBar
      */
@@ -49,6 +52,7 @@ public class LanguageBar {
         slovak.setPrefWidth(70);
         languageBarRectangle.setFill(Color.rgb(84, 80, 79));
         languageBarTriangle.setFill(Color.rgb(84, 80, 79));
+
     }
 
     //Getters
@@ -57,14 +61,28 @@ public class LanguageBar {
     }
 
     public JFXButton getEnglish() {
+        english.setOnAction(event1 -> {
+            languages.setLanguageFromConfigFile("EN");
+        });
         return english;
     }
 
     public JFXButton getCzech() {
+        czech.setOnAction(event1 -> {
+            languages.setLanguageFromConfigFile("CZ");
+        });
         return czech;
     }
 
     public JFXButton getSlovak() {
+        slovak.setOnAction(event1 -> {
+            languages.setLanguageFromConfigFile("SK");
+        });
         return slovak;
+    }
+
+    public void setDefaultLanguage(){
+        //setting default language
+        languages.setLanguageFromConfigFile("EN");
     }
 }
